@@ -41,6 +41,3 @@ dev = [
     "flake8>=4.0.0",
 ]
 
-[project.urls]
-Homepage = "https://gitlab.criteois.com/g.handley/ticket_extractor"
-Repository = "https://gitlab.criteois.com/g.handley/ticket_extractor.git" 
