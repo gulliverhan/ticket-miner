@@ -1,0 +1,296 @@
+{
+  "ticket": {
+    "key": "PROJ-1234",
+    "fields": {
+      "summary": "Test ticket",
+      "description": "This is a test ticket with references to PROJ-5678 and PROJ-9012",
+      "status": {
+        "self": "https://jira.example.com/rest/api/2/status/10209",
+        "description": "",
+        "iconUrl": "https://jira.example.com/images/icons/statuses/inprogress.png",
+        "name": "In Progress",
+        "id": "10209",
+        "statusCategory": {
+          "self": "https://jira.example.com/rest/api/2/statuscategory/4",
+          "id": 4,
+          "key": "indeterminate",
+          "colorName": "yellow",
+          "name": "In Progress"
+        }
+      },
+      "created": "2025-02-14T12:21:43.000+0000",
+      "updated": "2025-02-14T13:21:43.000+0000",
+      "priority": {
+        "self": "https://jira.example.com/rest/api/2/priority/4",
+        "iconUrl": "https://jira.example.com/images/icons/priorities/minor.svg",
+        "name": "Minor",
+        "id": "4"
+      },
+      "assignee": {
+        "self": "https://jira.example.com/rest/api/2/user?accountId=user123",
+        "accountId": "user123",
+        "emailAddress": "alice.smith@example.com",
+        "avatarUrls": {
+          "48x48": "https://avatar.example.com/user123/48",
+          "24x24": "https://avatar.example.com/user123/24",
+          "16x16": "https://avatar.example.com/user123/16",
+          "32x32": "https://avatar.example.com/user123/32"
+        },
+        "displayName": "Alice Smith",
+        "active": true,
+        "timeZone": "Etc/GMT",
+        "accountType": "atlassian"
+      },
+      "reporter": {
+        "self": "https://jira.example.com/rest/api/2/user?accountId=user456",
+        "accountId": "user456",
+        "emailAddress": "bob.jones@example.com",
+        "avatarUrls": {
+          "48x48": "https://avatar.example.com/user456/48",
+          "24x24": "https://avatar.example.com/user456/24",
+          "16x16": "https://avatar.example.com/user456/16",
+          "32x32": "https://avatar.example.com/user456/32"
+        },
+        "displayName": "Bob Jones",
+        "active": true,
+        "timeZone": "Etc/GMT",
+        "accountType": "atlassian"
+      },
+      "labels": [
+        "test",
+        "mock"
+      ],
+      "issuelinks": [
+        {
+          "type": {
+            "id": "11602",
+            "name": "relates to",
+            "inward": "is blocked by",
+            "outward": "blocks",
+            "self": "https://jira.example.com/rest/api/2/issueLinkType/11602"
+          },
+          "outwardIssue": {
+            "id": "20385166",
+            "key": "PROJ-5678",
+            "self": "https://jira.example.com/rest/api/2/issue/20385166",
+            "fields": {
+              "summary": "Related ticket 2"
+            }
+          }
+        },
+        {
+          "type": {
+            "id": "11602",
+            "name": "relates to",
+            "inward": "is blocked by",
+            "outward": "blocks",
+            "self": "https://jira.example.com/rest/api/2/issueLinkType/11602"
+          },
+          "inwardIssue": {
+            "id": "20387778",
+            "key": "PROJ-1234",
+            "self": "https://jira.example.com/rest/api/2/issue/20387778",
+            "fields": {
+              "summary": "[Project] Example Feature Request",
+              "status": {
+                "self": "https://jira.example.com/rest/api/2/status/10209",
+                "description": "",
+                "iconUrl": "https://jira.example.com/images/icons/statuses/inprogress.png",
+                "name": "In Progress",
+                "id": "10209",
+                "statusCategory": {
+                  "self": "https://jira.example.com/rest/api/2/statuscategory/4",
+                  "id": 4,
+                  "key": "indeterminate",
+                  "colorName": "yellow",
+                  "name": "In Progress"
+                }
+              },
+              "priority": {
+                "self": "https://jira.example.com/rest/api/2/priority/4",
+                "iconUrl": "https://jira.example.com/images/icons/priorities/minor.svg",
+                "name": "Minor",
+                "id": "4"
+              },
+              "issuetype": {
+                "self": "https://jira.example.com/rest/api/2/issuetype/57",
+                "id": "57",
+                "description": "Request for information or expertise",
+                "iconUrl": "https://jira.example.com/images/icons/issuetypes/undefined.png",
+                "name": "Information Request",
+                "subtask": false,
+                "hierarchyLevel": 0
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "comments": {
+    "comments": [
+      {
+        "id": "1",
+        "body": "First comment with a link to https://confluence.example.com/display/TEST/Page1",
+        "author": {
+          "displayName": "Alice Smith"
+        },
+        "created": "2025-02-14T12:30:00.000+0000"
+      },
+      {
+        "id": "2",
+        "body": "Second comment with a link to https://jira.example.com/browse/PROJ-5678",
+        "author": {
+          "displayName": "Bob Jones"
+        },
+        "created": "2025-02-14T13:00:00.000+0000"
+      },
+      {
+        "id": "3",
+        "body": "Bot comment that should be filtered",
+        "author": {
+          "displayName": "Notification Bot"
+        },
+        "created": "2025-02-14T13:15:00.000+0000"
+      }
+    ]
+  },
+  "referenced_tickets": {
+    "PROJ-5678": {
+      "ticket": {
+        "key": "PROJ-5678",
+        "fields": {
+          "summary": "Referenced ticket 1",
+          "description": "This is a referenced ticket",
+          "status": {
+            "self": "https://jira.example.com/rest/api/2/status/6",
+            "description": "The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.",
+            "iconUrl": "https://jira.example.com/images/icons/statuses/closed.png",
+            "name": "Closed",
+            "id": "6",
+            "statusCategory": {
+              "self": "https://jira.example.com/rest/api/2/statuscategory/3",
+              "id": 3,
+              "key": "done",
+              "colorName": "green",
+              "name": "Done"
+            }
+          },
+          "created": "2025-02-13T10:00:00.000+0000",
+          "updated": "2025-02-13T11:00:00.000+0000",
+          "priority": {
+            "self": "https://jira.example.com/rest/api/2/priority/3",
+            "iconUrl": "https://jira.example.com/images/icons/priorities/major.svg",
+            "name": "Major",
+            "id": "3"
+          },
+          "assignee": {
+            "self": "https://jira.example.com/rest/api/2/user?accountId=user456",
+            "accountId": "user456",
+            "emailAddress": "bob.jones@example.com",
+            "avatarUrls": {
+              "48x48": "https://avatar.example.com/user456/48",
+              "24x24": "https://avatar.example.com/user456/24",
+              "16x16": "https://avatar.example.com/user456/16",
+              "32x32": "https://avatar.example.com/user456/32"
+            },
+            "displayName": "Bob Jones",
+            "active": true,
+            "timeZone": "Etc/GMT",
+            "accountType": "atlassian"
+          },
+          "reporter": {
+            "self": "https://jira.example.com/rest/api/2/user?accountId=user789",
+            "accountId": "user789",
+            "emailAddress": "carol.white@example.com",
+            "avatarUrls": {
+              "48x48": "https://avatar.example.com/user789/48",
+              "24x24": "https://avatar.example.com/user789/24",
+              "16x16": "https://avatar.example.com/user789/16",
+              "32x32": "https://avatar.example.com/user789/32"
+            },
+            "displayName": "Carol White",
+            "active": true,
+            "timeZone": "Etc/GMT",
+            "accountType": "atlassian"
+          },
+          "labels": [
+            "test",
+            "documentation",
+            "feature"
+          ],
+          "issuelinks": []
+        }
+      },
+      "comments": []
+    },
+    "PROJ-9012": {
+      "ticket": {
+        "key": "PROJ-9012",
+        "fields": {
+          "summary": "Referenced ticket 2",
+          "description": "Another referenced ticket",
+          "status": {
+            "self": "https://jira.example.com/rest/api/2/status/6",
+            "description": "The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.",
+            "iconUrl": "https://jira.example.com/images/icons/statuses/closed.png",
+            "name": "Closed",
+            "id": "6",
+            "statusCategory": {
+              "self": "https://jira.example.com/rest/api/2/statuscategory/3",
+              "id": 3,
+              "key": "done",
+              "colorName": "green",
+              "name": "Done"
+            }
+          },
+          "created": "2025-02-13T12:00:00.000+0000",
+          "updated": "2025-02-13T13:00:00.000+0000",
+          "priority": {
+            "self": "https://jira.example.com/rest/api/2/priority/3",
+            "iconUrl": "https://jira.example.com/images/icons/priorities/major.svg",
+            "name": "Major",
+            "id": "3"
+          },
+          "assignee": {
+            "self": "https://jira.example.com/rest/api/2/user?accountId=user456",
+            "accountId": "user456",
+            "emailAddress": "bob.jones@example.com",
+            "avatarUrls": {
+              "48x48": "https://avatar.example.com/user456/48",
+              "24x24": "https://avatar.example.com/user456/24",
+              "16x16": "https://avatar.example.com/user456/16",
+              "32x32": "https://avatar.example.com/user456/32"
+            },
+            "displayName": "Bob Jones",
+            "active": true,
+            "timeZone": "Etc/GMT",
+            "accountType": "atlassian"
+          },
+          "reporter": {
+            "self": "https://jira.example.com/rest/api/2/user?accountId=user789",
+            "accountId": "user789",
+            "emailAddress": "carol.white@example.com",
+            "avatarUrls": {
+              "48x48": "https://avatar.example.com/user789/48",
+              "24x24": "https://avatar.example.com/user789/24",
+              "16x16": "https://avatar.example.com/user789/16",
+              "32x32": "https://avatar.example.com/user789/32"
+            },
+            "displayName": "Carol White",
+            "active": true,
+            "timeZone": "Etc/GMT",
+            "accountType": "atlassian"
+          },
+          "labels": [
+            "test",
+            "documentation",
+            "feature"
+          ],
+          "issuelinks": []
+        }
+      },
+      "comments": []
+    }
+  }
+}

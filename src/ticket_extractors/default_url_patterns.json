@@ -1,0 +1,64 @@
+{
+  "url_patterns": {
+    "help_center": {
+      "domains": [
+        "help.example.com",
+        "support.example.com"
+      ],
+      "scrape": true,
+      "exclude_patterns": [
+        "^/search(/.*)?$",
+        "^/generated(/.*)?$",
+        "^/user(/.*)?$"
+      ]
+    },
+    "developer_docs": {
+      "domains": [
+        "developers.example.com",
+        "developer.example.com"
+      ],
+      "scrape": true,
+      "exclude_patterns": [
+        "^/versions/archived(/.*)?$"
+      ]
+    },
+    "retail_media": {
+      "domains": [
+        "retail.example.com",
+        "retail-media.example.com"
+      ],
+      "scrape": false,
+      "resource_patterns": [
+        {
+          "pattern": "/campaign/([0-9]+)",
+          "type": "campaign",
+          "extract_id": "$1"
+        },
+        {
+          "pattern": "/products/([0-9]+)",
+          "type": "product",
+          "extract_id": "$1"
+        }
+      ]
+    },
+    "commerce_growth": {
+      "domains": [
+        "commerce.example.com",
+        "commerce-growth.example.com"
+      ],
+      "scrape": false,
+      "resource_patterns": [
+        {
+          "pattern": "/catalog/([0-9]+)",
+          "type": "catalog",
+          "extract_id": "$1"
+        },
+        {
+          "pattern": "/products/([0-9]+)",
+          "type": "product",
+          "extract_id": "$1"
+        }
+      ]
+    }
+  }
+} 

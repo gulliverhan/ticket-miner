@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ticket_extractors"
+dynamic = ["version"]
+description = "A package for extracting content from Jira tickets, including linked issues, Confluence, webpages, and analyzing people mentions"
+readme = "README.md"
+authors = [
+    {name = "Gulliver Handley", email = "g.handley@criteo.com"},
+]
+license = {text = "MIT"}
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "atlassian-python-api>=3.41.4",
+    "python-dotenv>=1.0.0",
+    "playwright>=1.41.1",
+    "beautifulsoup4>=4.12.2",
+    "html2text>=2020.1.16",
+    "requests>=2.31.0",
+    "markdownify>=0.11.6",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=22.0.0",
+    "isort>=5.0.0",
+    "flake8>=4.0.0",
+]
+
+[project.urls]
+Homepage = "https://gitlab.criteois.com/g.handley/ticket_extractor"
+Repository = "https://gitlab.criteois.com/g.handley/ticket_extractor.git" 
